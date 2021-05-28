@@ -1,0 +1,439 @@
+{
+  "Almuerzos": {
+    "Pasta al huevo artesanal": ["Spaguetti", "Tagliatelle", "Pappardelle"],
+    "Salsa": ["Bechamel", "Tomate", "Pesto"],
+    "Acompañamientos/Toppings": [
+      "Espinaca bebé",
+      "Albahaca",
+      "Tomate Cereza",
+      "Aceituna Verde",
+      "Cebolla blanca",
+      "Champiñones",
+      "Queso azul",
+      "Pimientos",
+      "Brócoli",
+      "Pollo",
+      "Carne",
+      "Jamón",
+      "Panceta",
+      "Berenjena"
+    ]
+  },
+  "Pizzas":{
+      "Básica":{
+        "QUESO":{
+            "PERSONAL":17,
+            "PEQUEÑA":26,
+            "MEDIANA":37,
+            "GRANDE":62
+        },
+        "JAMÓN":{
+            "PERSONAL":19,
+            "PEQUEÑA":28,
+            "MEDIANA":39,
+            "GRANDE":64
+        },
+        "PROSCIUTTO DI PARMA":{
+            "PERSONAL":25,
+            "PEQUEÑA":34,
+            "MEDIANA":45,
+            "GRANDE":75
+        },
+        "PANCETA":{
+            "PERSONAL":20,
+            "PEQUEÑA":29,
+            "MEDIANA":40,
+            "GRANDE":65
+        },
+        "FRANKFURT":{
+            "PERSONAL":19,
+            "PEQUEÑA":28,
+            "MEDIANA":39,
+            "GRANDE":64
+        },
+        "CHORIZO":{
+            "PERSONAL":19,
+            "PEQUEÑA":28,
+            "MEDIANA":38,
+            "GRANDE":64
+        },
+        "CABANOSSI":{
+            "PERSONAL":19,
+            "PEQUEÑA":27,
+            "MEDIANA":38,
+            "GRANDE":63
+        },
+        "ATÚN":{
+            "PERSONAL":21,
+            "PEQUEÑA":30,
+            "MEDIANA":41,
+            "GRANDE":66
+        },
+        "LANGOSTINOS":{
+            "PERSONAL":21,
+            "PEQUEÑA":30,
+            "MEDIANA":41,
+            "GRANDE":66
+        },
+        "POLLO":{
+            "PERSONAL":19,
+            "PEQUEÑA":28,
+            "MEDIANA":39,
+            "GRANDE":64
+        },
+        "CHAMPIÑONES":{
+            "PERSONAL":21,
+            "PEQUEÑA":30,
+            "MEDIANA":41,
+            "GRANDE":66
+        },
+        "FUNGHI PORCIN":{
+            "PERSONAL":24,
+            "PEQUEÑA":33,
+            "MEDIANA":44,
+            "GRANDE":74
+        },
+        "TOMATE CEREZA":{
+            "PERSONAL":19,
+            "PEQUEÑA":28,
+            "MEDIANA":39,
+            "GRANDE":64
+        },
+        "ALBAHACA":{
+            "PERSONAL":18,
+            "PEQUEÑA":27,
+            "MEDIANA":38,
+            "GRANDE":63
+        },
+        "ESPÁRRAGOS":{
+            "PERSONAL":19,
+            "PEQUEÑA":28,
+            "MEDIANA":39,
+            "GRANDE":64
+        },
+        "PALMITO":{
+            "PERSONAL":19,
+            "PEQUEÑA":28,
+            "MEDIANA":39,
+            "GRANDE":64
+        },
+        "CHOCLITO AMERICANO":{
+            "PERSONAL":19,
+            "PEQUEÑA":28,
+            "MEDIANA":39,
+            "GRANDE":64
+        },
+        "ACEITUNA VERDE":{
+            "PERSONAL":19,
+            "PEQUEÑA":28,
+            "MEDIANA":39,
+            "GRANDE":64
+        },
+        "BERENJENA":{
+            "PERSONAL":18,
+            "PEQUEÑA":27,
+            "MEDIANA":38,
+            "GRANDE":63
+        }
+      },
+      "Mixta":{
+        "LA CAÑERÍA":{
+            "PERSONAL":25,
+            "PEQUEÑA":34,
+            "MEDIANA":45,
+            "GRANDE":75
+        },
+        "LA PEPA":{
+            "PERSONAL":23,
+            "PEQUEÑA":32,
+            "MEDIANA":43,
+            "GRANDE":73
+        },
+        "BOTÁNICA":{
+            "PERSONAL":23,
+            "PEQUEÑA":32,
+            "MEDIANA":43,
+            "GRANDE":73
+        },
+        "CARNAL":{
+            "PERSONAL":22,
+            "PEQUEÑA":31,
+            "MEDIANA":42,
+            "GRANDE":72
+        },
+        "LA CUBAN":{
+            "PERSONAL":22,
+            "PEQUEÑA":31,
+            "MEDIANA":42,
+            "GRANDE":72
+        },
+        "HABEMUS PIZZA":{
+            "PERSONAL":24,
+            "PEQUEÑA":33,
+            "MEDIANA":44,
+            "GRANDE":74
+        },
+        "LA VEGAN":{
+            "PERSONAL":22,
+            "PEQUEÑA":31,
+            "MEDIANA":42,
+            "GRANDE":72
+        },
+        "FULL VEGAN":{
+            "PERSONAL":24,
+            "PEQUEÑA":33,
+            "MEDIANA":44,
+            "GRANDE":74
+        },
+        "LA RANCHERA":{
+            "PERSONAL":22,
+            "PEQUEÑA":31,
+            "MEDIANA":42,
+            "GRANDE":72
+        },
+        "LA PITUCA":{
+            "PERSONAL":24,
+            "PEQUEÑA":33,
+            "MEDIANA":44,
+            "GRANDE":74
+        },
+        "CHAVALILLA":{
+            "PERSONAL":23,
+            "PEQUEÑA":32,
+            "MEDIANA":43,
+            "GRANDE":73
+        },
+        "QUATTRO FORMAGGI":{
+            "PERSONAL":32,
+            "PEQUEÑA":41,
+            "MEDIANA":52,
+            "GRANDE":82
+        },
+        "LA BABY":{
+            "PERSONAL":22,
+            "PEQUEÑA":31,
+            "MEDIANA":42,
+            "GRANDE":72
+        },
+        "MARGARET":{
+            "PERSONAL":22,
+            "PEQUEÑA":31,
+            "MEDIANA":42,
+            "GRANDE":72
+        },
+        "JAMAICA":{
+            "PERSONAL":22,
+            "PEQUEÑA":32,
+            "MEDIANA":43,
+            "GRANDE":73
+        },
+        "LA BARBIE":{
+            "PERSONAL":22,
+            "PEQUEÑA":32,
+            "MEDIANA":43,
+            "GRANDE":73
+        },
+        "CARIBEÑA":{
+            "PERSONAL":21,
+            "PEQUEÑA":30,
+            "MEDIANA":41,
+            "GRANDE":71
+        },
+        "TROPICAL":{
+            "PERSONAL":23,
+            "PEQUEÑA":32,
+            "MEDIANA":43,
+            "GRANDE":73
+        },
+        "POMODORO":{
+            "PERSONAL":18,
+            "PEQUEÑA":27,
+            "MEDIANA":38,
+            "GRANDE":68
+        },
+        "OLIVIA":{
+            "PERSONAL":23,
+            "PEQUEÑA":32,
+            "MEDIANA":43,
+            "GRANDE":73
+        },
+        "SUAVE CAMAY":{
+            "PERSONAL":27,
+            "PEQUEÑA":36,
+            "MEDIANA":47,
+            "GRANDE":77
+        },
+        "4 y 1⁄4":{
+            "PERSONAL":22,
+            "PEQUEÑA":31,
+            "MEDIANA":42,
+            "GRANDE":72
+        },
+        "MAMMA MIA!":{
+            "PERSONAL":24,
+            "PEQUEÑA":33,
+            "MEDIANA":44,
+            "GRANDE":74
+        },
+        "LOMITO SALTADO":{
+            "PERSONAL":23,
+            "PEQUEÑA":32,
+            "MEDIANA":43,
+            "GRANDE":73
+        },
+        "PARA GALLOS":{
+            "PERSONAL":22,
+            "PEQUEÑA":31,
+            "MEDIANA":42,
+            "GRANDE":72
+        }
+      },
+      "Dulce-Sweet":{
+          "LA DOLCE":{
+            "PERSONAL":19,
+            "PEQUEÑA":28,
+            "MEDIANA":39,
+            "GRANDE":69
+          }
+      }
+  },
+  "CALZONE \"DE LA ABUELA\"":{
+    "BÁSICO":22,
+    "MIXTO":25,
+    "PICANTE":23,
+    "VEGANO":23,
+    "DULCE":22
+  },
+  "Tablas":{
+      "DI'LEO":28
+  },
+  "BRUSCHETTAS":{
+    "SIMPLE":6,
+    "ESPECIAL":12,
+    "PA ́PICAR":15,
+    "CAMPESINA":14
+  },
+  "LASAGNA / LASAÑA":{
+    "DE LA CAÑERIA":26,
+    "BOLOÑESA":23,
+    "VEGANA":23
+  },
+  "RAVIOLES / RAVIOLI":{
+    "CARNE \"MEAT\"":24,
+    "ESPINACA “SPINACH“":24
+  },
+  "ENSALADAS":{
+    "ATÚN “TUNA”":16,
+    "TROPICAL":18,
+    "VEGAN":16,
+    "JAMON “HAM”":16
+  },
+  "CRÊPES":{
+      "DULCES":{
+        "DULCE DE LECHE":12,
+        "DULCE DE LECHE Y DURAZNO":14,
+        "LECHE CONDENSADA":12,
+        "LECHE CONDENSADA Y BANANA":14,
+        "LECHE CONDENSADA, ARÁNDANOS Y MANZANA":18,
+        "NUTELLA":14,
+        "NUTELLA, FRESAS Y CREMA CHANTILLY":16,
+        "ESPECIAL DE LA CAÑERÍA":16
+      },
+      "SALADOS":{
+        "CHAMPIÑONES FLAMBEADOS CON VINO TINTO, ESPINACA, NUECES, QUESO AZUL Y MOZZARELLA":18,
+        "JAMÓN, HUEVO Y MOZZARELLA":16,
+        "POLLO, PIMIENTOS Y MOZZARELLA":16
+      }
+  },
+  "CREMAS":{
+    "CHAMPIÑONES":14,
+    "ESPÁRRAGOS":14,
+    "ESPINACA":14,
+    "ZAPALLO":14
+  },
+  "BEBIDAS":{
+    "LIMONADA":{
+        "1L":12,
+        "2L":20
+    },
+    "NARANJADA":{
+        "1L":12,
+        "2L":20
+    },
+    "CHICHA DE MAÍZ MORADO":{
+        "1L":12,
+        "2L":20
+    },
+    "GASEOSA REGULAR":{
+        "1L":4,
+        "2L":9,
+        "TIPOS":["Coca Cola","Inka Cola","Fanta","Sprite"]
+    },
+    "KOLA ESCOCESA REGULAR":{
+        "1L":4.5,
+        "2L":9
+    },
+    "SCHWEPPES":{
+        "1L":5
+    },
+    "REDBULL":{
+        "1L":11
+    },
+    "AGUA":{
+        "1L":3
+    },
+    "JUGOS DE FRUTA NATURALES":{
+        "PAPAYA":7,
+        "PIÑA":7,
+        "FRESA":7,
+        "ZUMO DE NARANJA":8,
+        "PLÁTANO":7,
+        "DURAZNO":7,
+        "MIXTO (PAPAYA, PIÑA Y FRESA)":9
+    },
+    "BEBIDAS CALIENTES":{
+        "INFUSIONES":{
+            "TÉ":{
+                "PRECIO":6,
+                "TIPO":["Durazno","Verde-limón","Arándanos Y Frutos Del Bosque"]
+            },
+            "INFUSIONES":{
+                "PRECIO":4,
+                "TIPO":["Cedrón","Hierba Luisa","Anís","Manzanilla","Canela y Clavo"]
+            },
+            "EMOLIENTE":{
+                "PRECIO":9,
+                "TIPO":["De La Cañería"]
+            }
+        },
+        "BEBIDAS FRÍAS":{
+            "TÉ HELADO":7,
+            "CAFÉ HELADO":7,
+            "ICE-NELA":8,
+            "LATTE FRÍO":12,
+            "MIX TEA":9
+        },
+        "CAFÉ":{
+            "SIMPLE":6,
+            "DOBLE":10,
+            "AMERICANO":6,
+            "CHANTILLY":9,
+            "CORTADO":9,
+            "MACCHIATO":9
+        },
+        "CAPPUCCINOS":{
+            "SIMPLE":9,
+            "CHANTILLY":12,
+            "CAWI":15
+        },
+        "LATTE":{
+            "SIMPLE":12,
+            "VANELA":12,
+            "BAILEYS":12,
+            "CARAMELO":12,
+            "MOCCA":15,
+            "SUBMARINO":12
+        }
+    }
+  }
+}
