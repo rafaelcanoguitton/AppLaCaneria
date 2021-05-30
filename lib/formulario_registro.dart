@@ -1,5 +1,5 @@
 import 'dart:io';
-
+import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 //import 'package:http/http.dart' as http;
 import 'package:dio/dio.dart';
@@ -51,8 +51,8 @@ class ApiError {
 
 class FormularioState2 extends State<Formulario2> {
   String _baseUrl = "https://api-db--pizzeria-la-caneria.herokuapp.com/";
-
-  void logUser(String username, String password, String wakito, String nomap,
+  String larespuestacion=null;
+  Future<void> logUser(String username, String password, String wakito, String nomap,
       BuildContext context) async {
     try {
       final response = await Dio().post('${_baseUrl}registrar', data: {
@@ -69,58 +69,66 @@ class FormularioState2 extends State<Formulario2> {
       // print('SU CODIGO DEL RESPONSE PE');
       // print(response.statusCode);
       if (response.statusCode == 200) {
-        showDialog(
-            context: context,
-            builder: (context) => AlertDialog(
-                  title: Text('Aviso'),
-                  content: Text(response.data),
-                  actions: [
-                    TextButton(
-                        onPressed: () {
-                          int count = 0;
-                          Navigator.of(context).popUntil((_) => count++ >= 2);
-                        },
-                        child: Text('Ok')),
-                    //TextButton(onPressed: () {}, child: Text('Cancel'))
-                  ],
-                ));
+        // showDialog(
+        //     context: context,
+        //     builder: (context) => AlertDialog(
+        //           title: Text('Aviso'),
+        //           content: Text(response.data),
+        //           actions: [
+        //             TextButton(
+        //                 onPressed: () {
+        //                   int count = 0;
+        //                   Navigator.of(context).popUntil((_) => count++ >= 2);
+        //                 },
+        //                 child: Text('Ok')),
+        //             //TextButton(onPressed: () {}, child: Text('Cancel'))
+        //           ],
+        //         ));
+        setState(() {
+          larespuestacion=response.data;
+        });
         //Navigator.of(context).pop();
       } else {
-        showDialog(
-            context: context,
-            builder: (context) => AlertDialog(
-                  title: Text('Aviso'),
-                  content: Text(response.data),
-                  actions: [
-                    TextButton(
-                        onPressed: () {
-                          Navigator.of(context).pop();
-                        },
-                        child: Text('Ok')),
-                    //TextButton(onPressed: () {}, child: Text('Cancel'))
-                  ],
-                ));
+        // showDialog(
+        //     context: context,
+        //     builder: (context) => AlertDialog(
+        //           title: Text('Aviso'),
+        //           content: Text(response.data),
+        //           actions: [
+        //             TextButton(
+        //                 onPressed: () {
+        //                   Navigator.of(context).pop();
+        //                 },
+        //                 child: Text('Ok')),
+        //             //TextButton(onPressed: () {}, child: Text('Cancel'))
+        //           ],
+        //         ));
+        setState(() {
+          larespuestacion=response.data;
+        });
       }
     } catch (e) {
-      showDialog(
-          context: context,
-          builder: (context) => AlertDialog(
-                title: Text('Aviso'),
-                content: Text('Ocurrió un error en el servidor'),
-                actions: [
-                  TextButton(
-                      onPressed: () {
-                        Navigator.of(context).pop();
-                      },
-                      child: Text('Ok')),
-                  //TextButton(onPressed: () {}, child: Text('Cancel'))
-                ],
-              ));
+      // showDialog(
+      //     context: context,
+      //     builder: (context) => AlertDialog(
+      //           title: Text('Aviso'),
+      //           content: Text('Ocurrió un error en el servidor'),
+      //           actions: [
+      //             TextButton(
+      //                 onPressed: () {
+      //                   Navigator.of(context).pop();
+      //                 },
+      //                 child: Text('Ok')),
+      //             //TextButton(onPressed: () {}, child: Text('Cancel'))
+      //           ],
+      //         ));
+      setState(() {
+        larespuestacion=e.response.data;
+      });
     }
   }
 
-  RegExp emailRegExp =
-      new RegExp(r'^\w+[\w-\.]*\@\w+((-\w+)|(\w*))\.[a-z]{2,3}$');
+  RegExp emailRegExp =new RegExp(r'^\w+[\w-\.]*\@\w+((-\w+)|(\w*))\.[a-z]{2,3}$');
   RegExp contRegExp = new RegExp(r'^([1-zA-Z0-1@.\s]{1,255})$');
   String _correo;
   String _contrasena;
@@ -178,7 +186,7 @@ class FormularioState2 extends State<Formulario2> {
                                     validator: (text) {
                                       if (text.length == 0) {
                                         return "Este campo correo es requerido";
-                                      } else if (!emailRegExp.hasMatch(text)) {
+                                      } else if (!EmailValidator.validate(text)) {
                                         return "El formato para correo no es correcto";
                                       }
                                       return null;
@@ -267,8 +275,41 @@ class FormularioState2 extends State<Formulario2> {
                                         _key.currentState.save();
                                         //AQUI VAMOS A LLAMAR LA API GAAAA
                                         setState(() {
-                                          logUser(_correo, _contrasena, _wakito,
-                                              _nom + _ape, context);
+                                          showDialog(
+                                          context: context,
+                                          builder: (context) => AlertDialog(
+                                                title: Text('Aviso'),
+                                                content: FutureBuilder(
+                                                    future: logUser(_correo, _contrasena, _wakito,
+                                              _nom + _ape, context),
+                                                    builder:
+                                                        ( context,
+                                                                snapshot) {
+                                                      if (larespuestacion==null) {
+                                                        return Container(
+                                                            height: 40,
+                                                            child:Center(child:
+                                                                CircularProgressIndicator())
+                                                            );
+                                                      } else {
+                                                        return Text(
+                                                            larespuestacion);
+                                                      }
+                                                      larespuestacion=null;
+                                                    }),
+                                                actions: [
+                                                  TextButton(
+                                                      onPressed: () {
+                                                        larespuestacion=null;
+                                                        Navigator.of(context)
+                                                            .pop();
+                                                        Navigator.of(context)
+                                                            .pop();
+                                                      },
+                                                      child: Text('Ok')),
+                                                  //TextButton(onPressed: () {}, child: Text('Cancel'))
+                                                ],
+                                              ));
                                         });
                                         print(
                                             'Gracias \n $_correo \n $_contrasena');

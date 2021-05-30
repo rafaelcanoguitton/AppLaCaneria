@@ -9,7 +9,7 @@ class PizzaBSelector extends StatefulWidget {
   int tirKey;
   int cuarKey;
   PizzaBSelector(this.nom, this.primKey, this.secKey, this.tirKey, this.cuarKey,
-      this.ag_car) {}
+      this.ag_car);
 
   @override
   _PizzaBSelectorState createState() =>

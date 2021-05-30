@@ -6,7 +6,8 @@ import 'carrito.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:geocoding/geocoding.dart';
 import 'pantalla_gmaps.dart';
-
+import 'menusito2.dart';
+import 'menusito3.dart';
 class MenuPrincipal extends StatefulWidget {
   final Function tas_loggeado;
   MenuPrincipal(this.tas_loggeado);
@@ -67,35 +68,31 @@ class MenuPrincipalState extends State<MenuPrincipal> {
         }
     }
   }
+
   DecorationImage image1;
   DecorationImage image2;
   DecorationImage image3;
-  
-  
-  
-  
+
   @override
   void initState() {
-
-
     image1 = DecorationImage(
-                            image: AssetImage('assets/pibsa2.jpg'),
-                            fit: BoxFit.cover,
-                          );
+      image: AssetImage('assets/pibsa2.jpg'),
+      fit: BoxFit.cover,
+    );
     image2 = DecorationImage(
-                            image: AssetImage('assets/fondito.jpg'),
-                            fit: BoxFit.cover,
-                          );
+      image: AssetImage('assets/fondito.jpg'),
+      fit: BoxFit.cover,
+    );
     image3 = DecorationImage(
-                            image: AssetImage('assets/pizza1.jpg'),
-                            fit: BoxFit.cover,
-                          );
-    
+      image: AssetImage('assets/pizza1.jpg'),
+      fit: BoxFit.cover,
+    );
+
     super.initState();
   }
 
   @override
-  void didChangeDependencies() async{
+  void didChangeDependencies() async {
     precacheImage(AssetImage("assets/pibsa2.jpg"), context);
     precacheImage(AssetImage("assets/fondito.jpg"), context);
     precacheImage(AssetImage("assets/pizza1.jpg"), context);
@@ -120,12 +117,12 @@ class MenuPrincipalState extends State<MenuPrincipal> {
                           fontSize: 20),
                     ),
                     InkWell(
-                      onTap: (){
+                      onTap: () {
                         Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => Menusito((upCarrito))),
-                    );
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Menusito((upCarrito))),
+                        );
                       },
                       child: Container(
                         width: 160,
@@ -151,8 +148,12 @@ class MenuPrincipalState extends State<MenuPrincipal> {
                           fontSize: 20),
                     ),
                     InkWell(
-                      onTap: (){
-                        print('Spoken Promises');
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Menusito2((upCarrito))),
+                        );
                       },
                       child: Container(
                         width: 160,
@@ -161,9 +162,9 @@ class MenuPrincipalState extends State<MenuPrincipal> {
                           border: Border.all(color: Colors.transparent),
                           borderRadius: BorderRadius.all(Radius.circular(20)),
                           image: image2,
-                          ),
                         ),
                       ),
+                    ),
                   ],
                 ),
               ],
@@ -181,8 +182,12 @@ class MenuPrincipalState extends State<MenuPrincipal> {
                           fontSize: 20),
                     ),
                     InkWell(
-                      onTap: (){
-                        print('Spoken Promises');
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Menusito3((upCarrito))),
+                        );
                       },
                       child: Container(
                         width: 160,
@@ -208,7 +213,7 @@ class MenuPrincipalState extends State<MenuPrincipal> {
                           fontSize: 20),
                     ),
                     InkWell(
-                      onTap: (){
+                      onTap: () {
                         print('Spoken Promises');
                       },
                       child: Container(
@@ -229,7 +234,39 @@ class MenuPrincipalState extends State<MenuPrincipal> {
         ),
       );
     } else if (show == 2) {
-      return Text('//TODO');
+      return Padding(
+        padding: const EdgeInsets.symmetric(vertical:50.0),
+        child: Expanded(
+          child: Center(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  '¡Arma tu propia pasta!',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue.shade900,
+                      fontSize: 20),
+                ),
+                InkWell(
+                  onTap: () {
+                    print('Spoken Promises');
+                  },
+                  child: Container(
+                    width: 200,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.transparent),
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                      image: image2,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
     } else if (show == 3) {
       return Text('//TODO');
     } else if (show == 4) {
@@ -404,7 +441,6 @@ class MenuPrincipalState extends State<MenuPrincipal> {
                   ),
                   onPressed: () {
                     change_color(1);
-                    
                   },
                 ),
                 Column(
@@ -493,7 +529,7 @@ class MenuPrincipalState extends State<MenuPrincipal> {
                 ElevatedButton(
                   style: ButtonStyle(
                     padding: MaterialStateProperty.all<EdgeInsets>(
-                        EdgeInsets.symmetric(vertical: 20,horizontal: 15)),
+                        EdgeInsets.symmetric(vertical: 20, horizontal: 15)),
                     foregroundColor:
                         MaterialStateProperty.all<Color>(Colors.black),
                     backgroundColor: MaterialStateProperty.all<Color>(
@@ -577,6 +613,22 @@ class MenuPrincipalState extends State<MenuPrincipal> {
                               builder: (context) =>
                                   CarritoCompras(items, deletio_handler)),
                         );
+                      } else {
+                        showDialog(
+                            context: context,
+                            builder: (context) => AlertDialog(
+                                  title: Text('Aviso'),
+                                  content: Text(
+                                      'Primero añada un elemento a su canasta.'),
+                                  actions: [
+                                    TextButton(
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                        child: Text('Ok')),
+                                    //TextButton(onPressed: () {}, child: Text('Cancel'))
+                                  ],
+                                ));
                       }
                     },
                   ),

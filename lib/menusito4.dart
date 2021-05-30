@@ -4,12 +4,12 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 import 'pizzasb_selector.dart';
 
-class Menusito2 extends StatelessWidget {
+class Menusito4 extends StatelessWidget {
   //final data=json.decode('assets/menu.json');
   // Fetch content from the json file
   List<Widget> Menu = [];
   final Function ag_carrito;
-  Menusito2(this.ag_carrito);
+  Menusito4(this.ag_carrito);
   Map<String, List<String>> pizzasB;
   Future<void> readJson(BuildContext context) async {
     final String response = await rootBundle.loadString('assets/menu.json');
@@ -17,7 +17,7 @@ class Menusito2 extends StatelessWidget {
     //print(menu.almuerzos.pastaAlHuevoArtesanal[0]);
     var menu = json.decode(response);
     print('MIERDAAA');
-    menu["Pizzas"]["Mixta"].forEach((key, value) {
+    menu["Pizzas"]["CALZONE \"DE LA ABUELA\""].forEach((key, value) {
       String nomPizza = key;
       int primKey = value["PERSONAL"];
       int secKey = value["PEQUEÑA"];
